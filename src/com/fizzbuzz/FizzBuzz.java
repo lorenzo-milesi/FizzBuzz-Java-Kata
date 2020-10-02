@@ -4,16 +4,14 @@ import org.jetbrains.annotations.NotNull;
 
 public class FizzBuzz {
     public String generate(int number) {
-        if (0 == number % 15) {
-            return "FizzBuzz";
-        }
+        StringBuilder result = new StringBuilder();
         if (0 == number % 3) {
-            return "Fizz";
+            result.append("Fizz");
         }
         if (0 == number % 5) {
-            return "Buzz";
+            result.append("Buzz");
         }
-        return String.valueOf(number);
+        return result.length() == 0 ? String.valueOf(number) : result.toString();
     }
 
     public String generateBetween(int from, int to) {
