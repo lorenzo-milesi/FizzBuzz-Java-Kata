@@ -17,6 +17,14 @@ public class FizzBuzz {
     public String generateBetween(int from, int to) {
         StringBuilder result = new StringBuilder();
 
+        if (from > to) {
+            for (int p = from; p >= to; p--) {
+                result.append(this.generate(p));
+            }
+
+            return result.toString();
+        }
+
         for (int p = from; p <= to; p++) {
             result.append(this.generate(p));
         }
