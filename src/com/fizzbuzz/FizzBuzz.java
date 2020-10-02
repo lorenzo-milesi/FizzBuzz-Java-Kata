@@ -1,5 +1,7 @@
 package com.fizzbuzz;
 
+import org.jetbrains.annotations.NotNull;
+
 public class FizzBuzz {
     public String generate(int number) {
         if (0 == number % 15) {
@@ -15,17 +17,29 @@ public class FizzBuzz {
     }
 
     public String generateBetween(int from, int to) {
-        StringBuilder result = new StringBuilder();
-
         if (from > to) {
-            for (int p = from; p >= to; p--) {
-                result.append(this.generate(p));
-            }
-
-            return result.toString();
+            return chromaticInverse(from, to);
         }
 
+        return chromatic(from, to);
+    }
+
+    @NotNull
+    private String chromatic(int from, int to) {
+        StringBuilder result = new StringBuilder();
+
         for (int p = from; p <= to; p++) {
+            result.append(this.generate(p));
+        }
+
+        return result.toString();
+    }
+
+    @NotNull
+    private String chromaticInverse(int from, int to) {
+        StringBuilder result = new StringBuilder();
+
+        for (int p = from; p >= to; p--) {
             result.append(this.generate(p));
         }
 
