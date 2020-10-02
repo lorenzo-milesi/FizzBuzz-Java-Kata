@@ -47,4 +47,9 @@ class FizzBuzzTest {
     public void shouldReturnBuzzWhen15() {
         assertEquals("FizzBuzz", _fizzBuzz.generate(15));
     }
+
+    @Test
+    public void shouldReturnBuzzWhen30() {
+        assertEquals("FizzBuzz", _fizzBuzz.generate(30));
+    }
 }
