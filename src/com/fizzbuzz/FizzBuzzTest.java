@@ -32,4 +32,11 @@ class FizzBuzzTest {
     public void shouldReturnFizzWhen6() {
         assertEquals("Fizz", _fizzBuzz.generate(6));
     }
+
+    @Test
+    public void shouldReturnFizzWhenMultipleOf3() {
+        for (int p = 1; p < 10; p++) {
+            assertEquals("Fizz", _fizzBuzz.generate(3 * p));
+        }
+    }
 }
