@@ -5,6 +5,9 @@ public class FizzBuzz {
         if (0 == number % 3) {
             return "Fizz";
         }
+        if (5 == number) {
+            return "Buzz";
+        }
         return String.valueOf(number);
     }
 }

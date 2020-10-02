@@ -39,4 +39,9 @@ class FizzBuzzTest {
             assertEquals("Fizz", _fizzBuzz.generate(3 * p));
         }
     }
+
+    @Test
+    public void shouldReturnBuzzWhen5() {
+        assertEquals("Buzz", _fizzBuzz.generate(5));
+    }
 }
