@@ -52,4 +52,9 @@ class FizzBuzzTest {
     public void shouldReturnBuzzWhen30() {
         assertEquals("FizzBuzz", _fizzBuzz.generate(30));
     }
+
+    @Test
+    public void shouldReturn12StringWhen1And2() {
+        assertEquals("12", _fizzBuzz.generateBetween(1, 2));
+    }
 }

@@ -13,4 +13,14 @@ public class FizzBuzz {
         }
         return String.valueOf(number);
     }
+
+    public String generateBetween(int from, int to) {
+        StringBuilder result = new StringBuilder();
+
+        for (int p = from; p <= to; p++) {
+            result.append(this.generate(p));
+        }
+
+        return result.toString();
+    }
 }
