@@ -8,6 +8,11 @@ class FizzBuzzTest {
 
     @Test
     public void shouldReturn1() {
-        assertEquals("1", new FizzBuzz().generate());
+        assertEquals("1", new FizzBuzz().generate(1));
+    }
+
+    @Test
+    public void shoudReturn2() {
+        assertEquals("2", new FizzBuzz().generate(2));
     }
 }
